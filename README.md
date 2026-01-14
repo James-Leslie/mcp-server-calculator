@@ -1,24 +1,22 @@
-# MCP Servers
-A collection of local Python MCP (Model Context Protocol) servers for use with Cursor.
+# Calculator MCP Server
+
+A simple Python MCP server that provides basic calculator functions.
+
+## Operations
+
+- `add(a: int, b: int)` - Adds two numbers
+- `multiply(a: int, b: int)` - Multiplies two numbers
 
 ## Configuration
-Clone the repo to a location of your choice, e.g. `~/mcp-servers`
-
-Add any of the servers to Cursor by updating the MCP configuration as follows:
+Add to Cursor by updating your MCP configuration:
 
 ```json
-{
-    "mcpServers": {
-        "<server-name>": {
-            "command": "uvx",
-            "args": [ 
-                "~/mcp-servers/<server-name>/."
-            ]
-        }
-    }
+"calculator": {
+  "command": "uvx",
+  "args": ["~/mcp-servers/calculator/."]
 }
 ```
 
 Place this in:
-- `~/.cursor/mcp.json` for global access (cursor will have access from any project)
+- `~/.cursor/mcp.json` for global access
 - `.cursor/mcp.json` for project-specific access
