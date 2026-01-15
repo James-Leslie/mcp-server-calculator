@@ -17,7 +17,7 @@ Add to Cursor by updating your MCP configuration:
 ```json
 "calculator": {
   "command": "uvx",
-  "args": ["~/mcp-servers/calculator/."]
+  "args": ["--from", "~/mcp-servers/calculator", "mcp-server-calculator"]
 }
 ```
 
