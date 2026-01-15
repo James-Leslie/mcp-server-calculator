@@ -3,6 +3,10 @@
     "docs-fastmcp": {
       "type": "http",
       "url": "https://gofastmcp.com/mcp"
+    },
+    "mcp-jl-calculator": {
+      "type": "sse",
+      "url": "https://mcp-jl-calculator.fastmcp.app/mcp"
     }
   }
 }

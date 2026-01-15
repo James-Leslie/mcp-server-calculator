@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"calculator": {
+			"url": "https://mcp-jl-calculator.fastmcp.app/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}
