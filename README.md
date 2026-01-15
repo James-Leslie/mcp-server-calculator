@@ -4,8 +4,12 @@ A simple Python MCP server that provides basic calculator functions.
 
 ## Operations
 
-- `add(a: int, b: int)` - Adds two numbers
-- `multiply(a: int, b: int)` - Multiplies two numbers
+- `calculate(expression: str)` - Evaluates mathematical expressions using sympy
+  - **Parameter**: `expression: str` - A mathematical expression string
+  - **Returns**: `str` - Result as a string (numeric value or sympy expression)
+  - **Supports**: Sympy syntax including operators (`+`, `-`, `*`, `/`, `**`, `^`), functions (`sqrt`, `sin`, `cos`, etc.), and symbols
+  - **Example**: `calculate("sqrt(16) + 3**2")` returns `"Result: 13"`
+  - **Note**: The previous `add()` and `multiply()` functions have been replaced by this unified calculation tool
 
 ## Configuration
 Add to Cursor by updating your MCP configuration:
