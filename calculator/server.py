@@ -1,3 +1,5 @@
+from typing import Annotated
+
 import sympy
 from fastmcp import FastMCP
 
@@ -12,12 +14,10 @@ mcp = FastMCP(
 
 
 @mcp.tool
-def calculate(expression: str) -> str:
-    """Evaluate a mathematical expression and return the result.
-
-    Args:
-        expression: A mathematical expression as a Python arithmetic string
-    """
+def calculate(
+    expression: Annotated[str, "Python arithmetic expression to evaluate"],
+) -> str:
+    """Returns the result of a mathematical expression."""
     try:
         result = sympy.sympify(expression)
     except sympy.SympifyError:
