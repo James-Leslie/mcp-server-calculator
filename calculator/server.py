@@ -13,7 +13,7 @@ mcp = FastMCP(
 )
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True})
 def calculate(
     expression: Annotated[str, "Python arithmetic expression to evaluate"],
 ) -> str:
